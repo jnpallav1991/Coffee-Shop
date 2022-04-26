@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="businesse"
+            type="com.envoy.coffeeshop.data.model.Businesse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="5dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintEnd_toEndOf="@id/guidlineRight"
+            app:layout_constraintStart_toStartOf="@id/guidlineLeft"
+            app:layout_constraintTop_toTopOf="@id/guidlineTop">
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                imageUrl="@{businesse.image_url}"
+                android:scaleType="centerCrop" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@{businesse.name}"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/guidlineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewImage" />
+
+        <TextView
+            android:id="@+id/txtLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:text="@{@string/location(businesse.location.address1,businesse.location.city)}"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_baseline_location_on_24"
+            app:layout_constraintStart_toStartOf="@id/guidlineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/txtShop" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@{businesse.price}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/guidlineRight"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewImage"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txtRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:text="@{Double.toString(businesse.rating)}"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_baseline_star_24"
+            app:layout_constraintBottom_toBottomOf="@id/guidlineBottom"
+            app:layout_constraintStart_toStartOf="@id/guidlineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/txtLocation"
+            tools:ignore="RtlSymmetry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
