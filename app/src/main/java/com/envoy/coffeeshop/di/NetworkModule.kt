@@ -39,7 +39,7 @@ class NetworkModule {
             interceptors().add(NetworkConnectionInterceptor(context))
             addInterceptor {
                 val newRequest: Request = it.request().newBuilder()
-                    .addHeader("Authorization", "Bearer "+BuildConfig.BEARER_TOKEN )
+                    .addHeader("Authorization", "Bearer "+BuildConfig.BEARER_TOKEN)
                     .build()
                 it.proceed(newRequest)
             }

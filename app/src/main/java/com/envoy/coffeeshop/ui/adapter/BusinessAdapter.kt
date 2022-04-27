@@ -27,14 +27,6 @@ class BusinessAdapter @Inject constructor() :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bindItems(result: Businesse) = with(binding) {
-//            Glide.with(itemView.context).load(result.image_url)
-//                //.placeholder(R.drawable.default_image)
-//                //.error(R.drawable.default_image)
-//                .into(binding.imageview)
-//            binding.txtShop.text = result.name
-//            binding.txtLocation.text = result.location.city
-//            binding.txtPrice.text = result.price
-//            binding.txtRating.text = result.rating.toString()
             businesse = result
         }
 

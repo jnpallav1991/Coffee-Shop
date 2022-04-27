@@ -11,8 +11,8 @@ plugins {
 android {
     compileSdk 31
 
-    // Load values from keystore.properties file
-    def keystorePropertiesFile = rootProject.file("keystore.properties")
+    // Load values from local.properties file
+    def keystorePropertiesFile = rootProject.file("local.properties")
     def keystoreProperties = new Properties()
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
@@ -26,7 +26,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         // Create BuildConfig variables
-        buildConfigField "String", "BEARER_TOKEN", keystoreProperties["BEARER_TOKEN"]
+        buildConfigField "String", "BEARER_TOKEN", keystoreProperties["bearer_token"]
     }
 
     buildTypes {
