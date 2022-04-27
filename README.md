@@ -1,7 +1,7 @@
 <h1 align="center">Coffee Shop</h1> 
 
 <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
-[![Medium](https://img.shields.io/badge/-Medium-000000?style=for-the-badge&logo=Medium&logoColor=white)](https://annchar.medium.com/android-paging-3-library-with-offset-and-limit-parameters-mvvm-livedata-and-coroutine-part1-5f85aa4fd29a)
+[![Medium](https://img.shields.io/badge/-Medium-000000?style=for-the-badge&logo=Medium&logoColor=white)]
 [![Github](https://img.shields.io/badge/-Github-000000?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/jnpallav1991)
 
 <p align="center">  
@@ -56,7 +56,7 @@ bearer_token = CKmDi8usoyvnzdKZAvvEBG7s9OQNF9QIP3OGqVjk
 ~~~ 
 
 ## Blog
-#[Android Paging 3 library with Offset and Limit parameters, MVVM, LiveData, and Coroutine - Part1](https://annchar.medium.com/android-paging-3-library-with-offset-and-limit-parameters-mvvm-livedata-and-coroutine-part1-5f85aa4fd29a)
+#[Android Paging 3 library with Limit and Offset parameters, MVVM, LiveData, Dagger, and Coroutine]
 
 # License
 ```xml
