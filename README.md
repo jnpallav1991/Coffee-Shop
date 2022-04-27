@@ -2,7 +2,7 @@
 
 <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
 [![Medium](https://img.shields.io/badge/-Medium-000000?style=for-the-badge&logo=Medium&logoColor=white)](https://annchar.medium.com/android-paging-3-library-with-offset-and-limit-parameters-mvvm-livedata-and-coroutine-part1-5f85aa4fd29a)
-[![Github](https://img.shields.io/badge/-Github-000000?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/annchar)
+[![Github](https://img.shields.io/badge/-Github-000000?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/jnpallav1991)
 
 <p align="center">  
 Coffee Shop is a small demo application based on modern Android application tech-stacks and MVVM architecture. Fetching data from the network and render data via Paging 3.
@@ -10,21 +10,21 @@ Coffee Shop is a small demo application based on modern Android application tech
 </br>
 
 <p align="center">
-<img src="/previews/screenshot.png" width="50%"/>
+<img src="/previews/screenshot.jpg" width="50%"/>
 </p>
 
 
 <img src="/previews/preview.gif" align="right" width="32%"/>
 
 ## Tech stack & Open-source libraries
-- Minimum SDK level 24
+- Minimum SDK level 28
 - [Kotlin](https://kotlinlang.org/) based.
 - [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) for asynchronous.
-- [Koin](https://github.com/InsertKoinIO/koin) for dependency injection.
+- [Dagger](https://developer.android.com/training/dependency-injection/dagger-android) for dependency injection.
 - Android Jetpack
     - Lifecycle - dispose of observing data when lifecycle state changes.
     - ViewModel - UI related data holder, lifecycle aware.
-    - ViewBinding - write code that interacts with views.
+    - DataBinding - write code that interacts with views.
     - Navigation - navigate in the app.
     - Paging 3 - render list.
 - Architecture
@@ -49,12 +49,11 @@ Coffee Shop using the [Yelp API](https://www.yelp.com/developers/documentation/v
 
 <b>How to run application</b>
 - Register [Yelp API](https://www.yelp.com/developers/documentation/v3)
-- Open keystore.properties file
-- Add `BEARER_TOKEN` line also add your api key like
+- Open local.properties file
+- Add `bearer_token` line also add your api key like
 ~~~ 
-BEARER_TOKEN = CKmDi8usoyvnzdKZAvvEBG7s9OQNF9QIP3OGqVjk
+bearer_token = CKmDi8usoyvnzdKZAvvEBG7s9OQNF9QIP3OGqVjk
 ~~~ 
-
 
 ## Blog
 #[Android Paging 3 library with Offset and Limit parameters, MVVM, LiveData, and Coroutine - Part1](https://annchar.medium.com/android-paging-3-library-with-offset-and-limit-parameters-mvvm-livedata-and-coroutine-part1-5f85aa4fd29a)
